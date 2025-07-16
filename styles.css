@@ -1,0 +1,169 @@
+/* Variaveis*/
+
+:root{
+  --background-color: rgb(125, 158, 158);
+  --cab-height: 900px;
+  --links-height: 250px;
+  --texto-img-height: 500px;
+}
+
+/* Comandos globais */
+
+html {
+  scroll-behavior: smooth;
+}
+  
+body {
+  background-image: url(kant_img.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+ul{
+  list-style-type: none;
+  justify-content: center;
+  display: flex;
+}
+
+/* Cabeçalho */
+
+.cabeçalho{
+  background-image: url(https://www.netmundi.org/filosofia/wp-content/uploads/2014/09/immanuel-kant-600x264.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: var(--cab-height);
+  align-items: center;
+}
+
+.cabeçalho h1{
+  text-align: center;
+  font-size: 150px;
+  font-family: "Tangerine", cursive;
+  font-weight: bold;
+  font-style: normal;
+  color: white;
+  padding-top: calc(var(--cab-height)*0.35);
+  margin-bottom: 30px;
+}
+
+.cabeçalho h2{
+  font-family: "Lugrasimo", cursive;
+  text-align: center;
+  font-size: 20px;
+  color: white;
+  margin-bottom: 30px;
+}
+
+/* Links ou cards para redirecionar a outros sites*/
+
+.links{
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition-delay: 0.5s;
+  padding: 50px 0;
+}
+.links img{
+  height: var(--links-height);
+  width: auto;
+}
+.links ul{
+  gap: 60px;
+}
+.links li{
+  padding: 20px;
+  background-color: white;
+  box-shadow: 10px 10px 5px rgb(71, 71, 71);
+  border-radius: 20px;
+  text-align: center;
+}
+.links li:hover{
+  transition: transform 0.7s;
+  transform: scale(1.1);
+}
+.links.visivel{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Menu ou aquele treco que rediceciona para o próprio site*/
+
+.menu{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: right;
+  padding: 0;
+  z-index: 10;
+  transition: 1s;
+}
+
+.menu ul{
+  gap: 10px;
+}
+
+.menu li{
+  font-family: "PT Serif", serif;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px 30px;
+  transition-duration: 0.5s;
+}
+
+.menu li:hover{
+  border-radius: 5px;
+  background-color: rgba(51, 51, 51, 0.7);
+}
+
+
+/* Textos ou informações basicas do site*/
+
+.texto{
+  display: flex;
+}
+.texto div{
+  background-color: rgba(43, 43, 43, 0.6);
+  max-width: calc(var(--texto-img-height) + 400px); height: auto;
+  display: flex;
+  padding: 20px; margin: 20px; margin-top: 80px;
+  border-radius: 5px;
+}
+.texto div img{
+  height: var(--texto-img-height); width: auto;
+  margin-right: 20px;
+}
+.txt_01{
+  float: left;
+}
+.texto div div{
+  background-color: transparent;
+  display: block;
+  justify-content: center;
+}
+.texto_txt h1{
+  margin-bottom: 20px;
+  color: bisque;
+}
+.texto_txt p{
+  font-size: 20px;
+}
+
+/* Não sei o que comentar*/
+
+footer{
+  background-color: rgb(16, 85, 97);
+}  
